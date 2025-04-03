@@ -1,30 +1,350 @@
-<!DOCTYPE html>
-<!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4842250,4,0,0,0,00010000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4842250&101" alt="hit tracker" border="0"></a></noscript>
-<!-- Histats.com  END  -->
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html amp>
+   <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,minimum-scale=1">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300" rel="stylesheet" type="text/css">
+     <style amp-custom>#branch-sdk{position:fixed;bottom:0;left:0;right:0;}
+       body {
+         margin: 0;
+         word-wrap: break-word;
+         font-family: "Open Sans", Helvetica, serif;
+       }
+       /* ============ Portrait ============ */
+       .main-image {
+         width: 100%;
+         height: 250px;
+         height: 75vw;
+         background-size: cover;
+         background-position: top center;
+       }
+       #content-container {
+         box-sizing: border-box;
+         padding: 24px;
+         margin: 0 24px;
+         background-color: #fff;
+       }
+       .app-title {
+         font-size: 14px;
+         padding-bottom: 11px;
+         text-transform: uppercase;
+       }
+       .card-title {
+         font-size: 33px;
+         line-height: 36px;
+       }
+       .app-content {
+         padding-top: 10px;
+         padding-bottom: 100px;
+         font-size: 20px;
+       }
+       .input-wrapper {
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 110px;
+         background-color: #fff;
+         box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+       }
+       .input-container {
+         width: 100%;
+         padding: 0 24px;
+         text-align: center;
+         box-sizing: border-box;
+       }
+       .form-get-the-app {
+         display: -webkit-box;
+         display: flex;
+         text-align: center;
+         padding-top: 10px;
+         border-top: 2px solid #cecece;
+         min-height: 300px;
+       }
+       .input-label {
+         padding: 4px 10px;
+         font-size: 13px;
+         overflow: hidden;
+         word-wrap: break-word;
+         text-align: center;
+       }
+       .app-icon {
+         width: 62px;
+         height: 62px;
+         line-height: 62px;
+         background-size: 100% auto;
+       }
+       .cta-button {
+         -webkit-box-flex: 1;
+         flex-grow: 1;
+         height: 62px;
+         line-height: 62px;
+         background-color: #444;
+         border-radius: 2px;
+         font-size: 20px;
+         padding: 0 20px;
+         margin-left: 10px;
+         color: #fff;
+         text-align: center;
+         text-decoration: none;
+         display: block;
+       }
+       /* No data (portrait) */
+       @media only screen and (orientation: portrait) {
+         .card--no-data .main-image {
+           background-image: url("http://s3-us-west-1.amazonaws.com/branch-assets/b_stripes-small.png");
+           background-size: auto;
+           background-position: top center;
+           background-repeat: repeat;
+           height: 190px;
+         }
+         .card--no-data > .app-icon {
+           position: absolute;
+           top: 160px;
+           left: 34px;
+         }
+         .card--no-data #content-container {
+           margin-top: 20px;
+         }
+         }
+         @media screen /* >= iPhone 5 */
+         and (min-device-width: 321px) {
+         .input-label {
+           font-size: 14px;
+         }
+       }
+       @media only screen /* >= iPhone 6 */
+         and (min-device-width: 375px)
+         and (orientation: portrait) {
+         .main-image {
+           height: 300px;
+           height: 80vw;
+         }
+         .app-content {
+           padding-bottom: 120px;
+         }
+         .input-wrapper {
+           height: 115px;
+         }
+       }
+       @media only screen /* >= iPhone 6+ */
+       and (min-device-width: 414px)
+       and (orientation: portrait) {
+         .main-image {
+           height: 390px;
+           height: 95vw;
+         }
+       }
+       /* ============ Landscape ============ */
+       @media only screen and (orientation: landscape){
+         .main-image {
+           position: fixed;
+           height: 100%;
+           height: 100vh;
+           width: 50%;
+         }
+         .input-wrapper {
+           right: 0;
+           left: auto;
+           width: 50%;
+         }
+         #content-container {
+           float: left;
+           width: 50%;
+           margin-left: 50%;
+         }
+         .input-wrapper {
+           height: 108px;
+         }
+         .app-content {
+           padding-bottom: 110px;
+         }
+         .form-get-the-app {
+           padding-top: 8px;
+         }
+         .input-container {
+           left: 50%;
+         }
+         .cta-button {
+           height: 44px;
+           line-height: 44px;
+           padding: 0 5px;
+           margin-left: 50px;
+         }
+         .app-icon {
+           width: 44px;
+           height: 44px;
+         }
+         /* No data (landscape) */
+         .card--no-data .main-image {
+           height: 100%;
+         }
+         .card--no-data > .app-icon {
+           display: none;
+         }
+         .card--no-data #content-container {
+           margin-top: 0;
+         }
+       }
+       @media only screen /* >= iPhone 6 */
+       and (min-device-width: 645px)
+       and (orientation: landscape) {
+         .form-get-the-app {
+           padding-top: 8px;
+         }
+         .cta-button {
+           height: 62px;
+           line-height: 62px;
+           padding: 0 20px;
+           margin-left: 70px;
+         }
+         .app-icon {
+           width: 62px;
+           height: 62px;
+           top: -2px;
+         }
+       }
+       /* Reusables */
+       .text-bold {
+         font-weight: 700
+       }
+       .text-light {
+         font-weight: 300;
+       }
+       .cta-button--no-app-icon {
+         margin-left: 0;
+       }
+     </style>
+       <a href="https://ibb.co/Ps42cRtr"><img src="https://i.ibb.co/Ps42cRtr/Whats-App-Image-2025-04-01-at-12-34-53-c05bfc89.jpg" alt="Whats-App-Image-2025-04-01-at-12-34-53-c05bfc89" border="0"></a>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <script>
-        setTimeout(function() {
-            window.location.href = "https://www.effectiveratecpm.com/nma7pvwyk0?key=4f3d8fbe367fefbabada5c482f491a50";
-        }, 1000); // 1000ms = 2 second delay
-    </script>
+    
+    <title>SlinkURL - Best Free URL Shortener</title>
+
+    <meta property="og:title" content="14:00 ⇆ㅤ❚❚ ───●──↻ 26:00">
+    <meta property="og:description" content="VID">
+    <meta property="fb:app_id" content="447050222104724">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:app:country" content="US">
+    <meta name="twitter:title" content="FRVR - Change the game">
+    <meta name="twitter:description" content="FRVR brings captivating games to billions of players instantly.">
+    <meta name="twitter:site" content="@frvrgames">
+    <meta name="description" content="Shorten your long URLs with SlinkURL.com - The fastest and most secure link shortener. Get shareable, trackable, and reliable short links now!">
+    <meta name="keywords" content="URL shortener, link shortener, free URL shortener, short links, SlinkURL">
+    <meta name="author" content="SlinkURL">
+    
+    <link rel="canonical" href="https://apps.apple.com/">
+    
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js" custom-element="amp-iframe"></script>
+    <script async src="https://cdn.ampproject.org/v0/amp-list-0.1.js" custom-element="amp-list"></script>
+    <script async src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" custom-template="amp-mustache"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 100%;
+            margin: 1rem;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff5e62;
+            margin-bottom: 1rem;
+        }
+        .title {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+        .description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            color: #fff;
+            background: #ff5e62;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            width: 100%;
+            max-width: 200px;
+        }
+        .cta-button:hover {
+            background: #ff9966;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            .title {
+                font-size: 1.2rem;
+            }
+            .description {
+                font-size: 0.9rem;
+            }
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+            .title {
+                font-size: 1rem;
+            }
+            .description {
+                font-size: 0.8rem;
+            }
+            .cta-button {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 
 </head>
 <body>
-    <p></p>
-<script src="https://www.drv.tw/inc/wd.js?s=gqnn4rmrbz2djwybuccdjg"></script>
+    <div class="container">
+        <div class="logo">🔗 SLINKURL.COM</div>
+        <div class="title">Shorten Your Links Instantly</div>
+        <div class="description">
+            Easily shorten long URLs into compact, shareable links with <strong>SlinkURL.com</strong>.  
+            Experience fast, secure, and reliable link management today!
+        </div>
+        <a href="https://slinkurl.com" class="cta-button">Get Started Now</a>
+    </div>
+
 </body>
 </html>
