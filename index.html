@@ -1,355 +1,157 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html amp>
-   <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width,minimum-scale=1">
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300" rel="stylesheet" type="text/css">
-     <style amp-custom>#branch-sdk{position:fixed;bottom:0;left:0;right:0;}
-       body {
-         margin: 0;
-         word-wrap: break-word;
-         font-family: "Open Sans", Helvetica, serif;
-       }
-       /* ============ Portrait ============ */
-       .main-image {
-         width: 100%;
-         height: 250px;
-         height: 75vw;
-         background-size: cover;
-         background-position: top center;
-       }
-       #content-container {
-         box-sizing: border-box;
-         padding: 24px;
-         margin: 0 24px;
-         background-color: #fff;
-       }
-       .app-title {
-         font-size: 14px;
-         padding-bottom: 11px;
-         text-transform: uppercase;
-       }
-       .card-title {
-         font-size: 33px;
-         line-height: 36px;
-       }
-       .app-content {
-         padding-top: 10px;
-         padding-bottom: 100px;
-         font-size: 20px;
-       }
-       .input-wrapper {
-         position: fixed;
-         bottom: 0;
-         left: 0;
-         width: 100%;
-         height: 110px;
-         background-color: #fff;
-         box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
-       }
-       .input-container {
-         width: 100%;
-         padding: 0 24px;
-         text-align: center;
-         box-sizing: border-box;
-       }
-       .form-get-the-app {
-         display: -webkit-box;
-         display: flex;
-         text-align: center;
-         padding-top: 10px;
-         border-top: 2px solid #cecece;
-         min-height: 300px;
-       }
-       .input-label {
-         padding: 4px 10px;
-         font-size: 13px;
-         overflow: hidden;
-         word-wrap: break-word;
-         text-align: center;
-       }
-       .app-icon {
-         width: 62px;
-         height: 62px;
-         line-height: 62px;
-         background-size: 100% auto;
-       }
-       .cta-button {
-         -webkit-box-flex: 1;
-         flex-grow: 1;
-         height: 62px;
-         line-height: 62px;
-         background-color: #444;
-         border-radius: 2px;
-         font-size: 20px;
-         padding: 0 20px;
-         margin-left: 10px;
-         color: #fff;
-         text-align: center;
-         text-decoration: none;
-         display: block;
-       }
-       /* No data (portrait) */
-       @media only screen and (orientation: portrait) {
-         .card--no-data .main-image {
-           background-image: url("http://s3-us-west-1.amazonaws.com/branch-assets/b_stripes-small.png");
-           background-size: auto;
-           background-position: top center;
-           background-repeat: repeat;
-           height: 190px;
-         }
-         .card--no-data > .app-icon {
-           position: absolute;
-           top: 160px;
-           left: 34px;
-         }
-         .card--no-data #content-container {
-           margin-top: 20px;
-         }
-         }
-         @media screen /* >= iPhone 5 */
-         and (min-device-width: 321px) {
-         .input-label {
-           font-size: 14px;
-         }
-       }
-       @media only screen /* >= iPhone 6 */
-         and (min-device-width: 375px)
-         and (orientation: portrait) {
-         .main-image {
-           height: 300px;
-           height: 80vw;
-         }
-         .app-content {
-           padding-bottom: 120px;
-         }
-         .input-wrapper {
-           height: 115px;
-         }
-       }
-       @media only screen /* >= iPhone 6+ */
-       and (min-device-width: 414px)
-       and (orientation: portrait) {
-         .main-image {
-           height: 390px;
-           height: 95vw;
-         }
-       }
-       /* ============ Landscape ============ */
-       @media only screen and (orientation: landscape){
-         .main-image {
-           position: fixed;
-           height: 100%;
-           height: 100vh;
-           width: 50%;
-         }
-         .input-wrapper {
-           right: 0;
-           left: auto;
-           width: 50%;
-         }
-         #content-container {
-           float: left;
-           width: 50%;
-           margin-left: 50%;
-         }
-         .input-wrapper {
-           height: 108px;
-         }
-         .app-content {
-           padding-bottom: 110px;
-         }
-         .form-get-the-app {
-           padding-top: 8px;
-         }
-         .input-container {
-           left: 50%;
-         }
-         .cta-button {
-           height: 44px;
-           line-height: 44px;
-           padding: 0 5px;
-           margin-left: 50px;
-         }
-         .app-icon {
-           width: 44px;
-           height: 44px;
-         }
-         /* No data (landscape) */
-         .card--no-data .main-image {
-           height: 100%;
-         }
-         .card--no-data > .app-icon {
-           display: none;
-         }
-         .card--no-data #content-container {
-           margin-top: 0;
-         }
-       }
-       @media only screen /* >= iPhone 6 */
-       and (min-device-width: 645px)
-       and (orientation: landscape) {
-         .form-get-the-app {
-           padding-top: 8px;
-         }
-         .cta-button {
-           height: 62px;
-           line-height: 62px;
-           padding: 0 20px;
-           margin-left: 70px;
-         }
-         .app-icon {
-           width: 62px;
-           height: 62px;
-           top: -2px;
-         }
-       }
-       /* Reusables */
-       .text-bold {
-         font-weight: 700
-       }
-       .text-light {
-         font-weight: 300;
-       }
-       .cta-button--no-app-icon {
-         margin-left: 0;
-       }
-     </style>
-       <link rel="apple-touch-icon" href="//sun9-65.userapi.com/s/v1/ig2/l1--XP5YaBz0zCOHcm4zcYMbUnh-X2-52UmDWlz0Bj5iy0hvcWaibXZIy_O7VWfs3lPYJkuXpbrunJnZRGBcW-_E.jpg?quality=95&blur=50,20&as=32x17,48x25,72x38,108x56,160x84,240x125,360x188,480x251,540x282,640x334,720x376&from=bu&u=k2wGteBAmDQGuAS66ENqT6iXs-5oHjBeWNEjWUHiWFM&cs=720x376">
-       <meta property="og:image" content="//sun9-65.userapi.com/s/v1/ig2/l1--XP5YaBz0zCOHcm4zcYMbUnh-X2-52UmDWlz0Bj5iy0hvcWaibXZIy_O7VWfs3lPYJkuXpbrunJnZRGBcW-_E.jpg?quality=95&blur=50,20&as=32x17,48x25,72x38,108x56,160x84,240x125,360x188,480x251,540x282,640x334,720x376&from=bu&u=k2wGteBAmDQGuAS66ENqT6iXs-5oHjBeWNEjWUHiWFM&cs=720x376">
-         <meta name="twitter:image:src" content="//sun9-65.userapi.com/s/v1/ig2/l1--XP5YaBz0zCOHcm4zcYMbUnh-X2-52UmDWlz0Bj5iy0hvcWaibXZIy_O7VWfs3lPYJkuXpbrunJnZRGBcW-_E.jpg?quality=95&blur=50,20&as=32x17,48x25,72x38,108x56,160x84,240x125,360x188,480x251,540x282,640x334,720x376&from=bu&u=k2wGteBAmDQGuAS66ENqT6iXs-5oHjBeWNEjWUHiWFM&cs=720x376">
-       
-
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>SlinkURL - Best Free URL Shortener</title>
-
-    <meta property="og:title" content="14:00 ⇆ㅤ❚❚ ───●──↻ 26:00">
-    <meta property="og:description" content="917,547,931 Views">
-    <meta property="fb:app_id" content="447050222104724">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" href="https://cdn.smarttraffic.live/uploads/users/377/7299d5e7-8b98-4969-85a0-382ecf224b0e.jpg">
+    <meta name="keywords" content="">
     <meta property="og:type" content="website">
+    <meta property="og:title" content="14:00 ⇆ㅤ❚❚ ───●──↻ 26:00">
+    <meta property="og:description" content=" ">
+    <meta property="og:image" content="https://cdn.smarttraffic.live/uploads/users/377/7299d5e7-8b98-4969-85a0-382ecf224b0e.jpg">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:image:alt" content="14:00 ⇆ㅤ❚❚ ───●──↻ 26:00">
+    <meta property="fb:app_id" content="9319096430277144">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:app:country" content="US">
-    <meta name="twitter:title" content="FRVR - Change the game">
-    <meta name="twitter:description" content="FRVR brings captivating games to billions of players instantly.">
-    <meta name="twitter:site" content="@frvrgames">
-    <meta name="description" content="Shorten your long URLs with SlinkURL.com - The fastest and most secure link shortener. Get shareable, trackable, and reliable short links now!">
-    <meta name="keywords" content="URL shortener, link shortener, free URL shortener, short links, SlinkURL">
-    <meta name="author" content="SlinkURL">
-    
-    <link rel="canonical" href="https://apps.apple.com/">
-    
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js" custom-element="amp-iframe"></script>
-    <script async src="https://cdn.ampproject.org/v0/amp-list-0.1.js" custom-element="amp-list"></script>
-    <script async src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" custom-template="amp-mustache"></script>
-
+    <meta name="twitter:title" content="14:00 ⇆ㅤ❚❚ ───●──↻ 26:00">
+    <meta name="twitter:description" content=" ">
+    <meta name="twitter:image" content="https://cdn.smarttraffic.live/uploads/users/377/7299d5e7-8b98-4969-85a0-382ecf224b0e.jpg">
+    <title>14:00 ⇆ㅤ❚❚ ───●──↻ 26:00</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ff9966, #ff5e62);
-            text-align: center;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1, h2 {
+            margin: 0 0 20px;
         }
         .container {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-width: 90%;
-            width: 100%;
-            margin: 1rem;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .post-info {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-actions {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .image-actions button, .image-actions span {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .image-actions button:hover, .image-actions span:hover {
+            background-color: #0056b3;
+        }
+        .image-actions .views {
+            display: inline-block;
+            margin-top: 10px;
+            color: #333;
+            font-size: 1em;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e9e9e9;
+            margin: 5px 0;
+            padding: 10px;
+            border-left: 4px solid #007BFF;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #007BFF;
+            color: white;
+            margin-top: 20px;
         }
         .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ff5e62;
-            margin-bottom: 1rem;
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .title {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            font-weight: bold;
-        }
-        .description {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 2rem;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            color: #fff;
-            background: #ff5e62;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-            width: 100%;
-            max-width: 200px;
-        }
-        .cta-button:hover {
-            background: #ff9966;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 600px) {
-            .logo {
-                font-size: 1.5rem;
-            }
-            .title {
-                font-size: 1.2rem;
-            }
-            .description {
-                font-size: 0.9rem;
-            }
-            .cta-button {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .logo {
-                font-size: 1.2rem;
-            }
-            .title {
-                font-size: 1rem;
-            }
-            .description {
-                font-size: 0.8rem;
-            }
-            .cta-button {
-                padding: 0.7rem 1.2rem;
-                font-size: 0.8rem;
-            }
+        .logo img {
+            max-width: 200px; /* Gi&#7899;i h&#7841;n chi&#7873;u r&#7897;ng t&#7889;i &#273;a */
+            height: auto;
         }
     </style>
-
 </head>
 <body>
-    <div class="container">
-        <div class="logo">🔗 SLINKURL.COM</div>
-        <div class="title">Shorten Your Links Instantly</div>
-        <div class="description">
-            Easily shorten long URLs into compact, shareable links with <strong>SlinkURL.com</strong>.  
-            Experience fast, secure, and reliable link management today!
+<header>
+<div class="logo">
+            <h1> Smarttraffic Network </h1>
         </div>
-        <a href="https://slinkurl.com" class="cta-button">Get Started Now</a>
-    </div>
+</header>
+<div class="container">
+<h1>14:00 ⇆ㅤ❚❚ ───●──↻ 26:00</h1>
+<div class="post-info">
+            <p>By <strong>ADz</strong> | Uploaded 2 days ago</p>
+        </div>
 
+<div class="image-actions">
+<a href="https://cdn.smarttraffic.live/uploads/users/377/7299d5e7-8b98-4969-85a0-382ecf224b0e.jpg" download>
+                <button>Download</button>
+            </a>
+</div>
+
+        <h2>Our Services</h2>
+        <ul>
+            <li>Real-time Traffic Monitoring</li>
+            <li>Intelligent Traffic Signals</li>
+            <li>Traffic Data Analytics</li>
+        </ul>
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, please contact us at:</p>
+        <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6900070f06291a04081b1d1d1b080f0f000a470a0604">[email protected]</a></p>
+    </div>
+    <footer>
+        <p>© 2024 Smart Traffic. All rights reserved.</p>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function shareImage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Smart Traffic Image',
+                    text: 'Check out this image from Smart Traffic!',
+                    url: 'https://cdn.smarttraffic.live/uploads/users/377/7299d5e7-8b98-4969-85a0-382ecf224b0e.jpg'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(console.error);
+            } else {
+                alert('Your browser does not support the share feature.');
+            }
+        }
+    </script>
 </body>
 </html>
