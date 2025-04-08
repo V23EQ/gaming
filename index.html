@@ -153,5 +153,52 @@
             }
         }
     </script>
+     <script>
+        // Disable Right-Click (Context Menu)
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert('Right-click is disabled on this website.');
+        }, false);
+
+        // Disable Text Selection on the entire page
+        document.body.style.userSelect = "none";
+
+        // Enable text selection in specific elements
+        // (can be added for paragraphs or other sections where you want selection allowed)
+        document.querySelector('.allow-select').style.userSelect = 'text';
+
+        // Block common keyboard shortcuts like Ctrl + C (copy), Ctrl + U (view source), and Ctrl + S (save page)
+        document.addEventListener('keydown', function (e) {
+            // Block Ctrl + U (view source)
+            if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+                e.preventDefault();
+                alert('Viewing source is disabled.');
+            }
+
+            // Block Ctrl + C (copy)
+            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                e.preventDefault();
+                alert('Copying content is disabled.');
+            }
+
+            // Block Ctrl + S (save page)
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                alert('Saving page is disabled.');
+            }
+
+            // Block F12 (DevTools) and Ctrl + Shift + I (DevTools)
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+                alert('Developer tools are disabled.');
+            }
+        });
+
+        // Prevent right-click menu for copying
+        document.addEventListener('copy', function (e) {
+            e.preventDefault();
+            alert('Copying content is disabled on this website.');
+        });
+    </script>
 </body>
 </html>
