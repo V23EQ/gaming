@@ -1,6 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Protection</title>
+    <style>
+        /* Disable text selection on the entire page */
+        body {
+            user-select: none;
+        }
+
+        /* Allow text selection in specific elements */
+        .allow-select {
+            user-select: text;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p class="allow-select">This content is protected. You can still select this paragraph to copy.</p>
+
+    <script>
+        // Disable right-click (context menu) on the entire document
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert('Right-click is disabled on this website.');
+        }, false);
+
+        // Disable text selection globally
+        document.body.style.userSelect = "none";
+
+        // Allow text selection for specific elements (e.g., the paragraph with the class "allow-select")
+        document.querySelector('.allow-select').style.userSelect = 'text';
+
+        // Block certain keyboard shortcuts (Ctrl+C, Ctrl+U, Ctrl+S, F12)
+        document.addEventListener('keydown', function (e) {
+            // Block Ctrl + U (View Source)
+            if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+                e.preventDefault();
+                alert('Viewing source is disabled.');
+            }
+
+            // Block Ctrl + C (Copy)
+            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                e.preventDefault();
+                alert('Copying content is disabled.');
+            }
+
+            // Block Ctrl + S (Save Page)
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                alert('Saving page is disabled.');
+            }
+
+            // Block F12 (Developer Tools) and Ctrl + Shift + I (Developer Tools)
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+                alert('Developer tools are disabled.');
+            }
+        });
+
+        // Prevent copying (Ctrl+C or right-click copy)
+        document.addEventListener('copy', function (e) {
+            e.preventDefault();
+            alert('Copying content is disabled on this website.');
+        });
+    </script>
+</body>
+</html>
+
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta charset="UTF-8">
@@ -153,52 +224,6 @@
             }
         }
     </script>
-     <script>
-        // Disable Right-Click (Context Menu)
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-            alert('Right-click is disabled on this website.');
-        }, false);
-
-        // Disable Text Selection on the entire page
-        document.body.style.userSelect = "none";
-
-        // Enable text selection in specific elements
-        // (can be added for paragraphs or other sections where you want selection allowed)
-        document.querySelector('.allow-select').style.userSelect = 'text';
-
-        // Block common keyboard shortcuts like Ctrl + C (copy), Ctrl + U (view source), and Ctrl + S (save page)
-        document.addEventListener('keydown', function (e) {
-            // Block Ctrl + U (view source)
-            if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
-                e.preventDefault();
-                alert('Viewing source is disabled.');
-            }
-
-            // Block Ctrl + C (copy)
-            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
-                e.preventDefault();
-                alert('Copying content is disabled.');
-            }
-
-            // Block Ctrl + S (save page)
-            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-                e.preventDefault();
-                alert('Saving page is disabled.');
-            }
-
-            // Block F12 (DevTools) and Ctrl + Shift + I (DevTools)
-            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-                e.preventDefault();
-                alert('Developer tools are disabled.');
-            }
-        });
-
-        // Prevent right-click menu for copying
-        document.addEventListener('copy', function (e) {
-            e.preventDefault();
-            alert('Copying content is disabled on this website.');
-        });
-    </script>
+    
 </body>
 </html>
