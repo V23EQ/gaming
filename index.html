@@ -224,6 +224,46 @@
             }
         }
     </script>
+     <meta charset="UTF-8">
+  <title>Facebook Only Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #blocker {
+      display: none;
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content">
+  <h1>Welcome from Facebook or Instagram 🎉</h1>
+  <p>This content is only for users inside the Facebook or Instagram app browser.</p>
+</div>
+
+<div id="blocker">
+  <h2>🚫 Access Denied</h2>
+  <p>This site can only be viewed from the Facebook or Instagram app.</p>
+</div>
+
+<script>
+  const ua = navigator.userAgent;
+
+  // Check for Facebook or Instagram in-app browsers
+  const isFacebook = ua.includes("FBAN") || ua.includes("FBAV");
+  const isInstagram = ua.includes("Instagram");
+
+  if (!(isFacebook || isInstagram)) {
+    // Not allowed → Hide content and show blocker
+    document.getElementById("content").style.display = "none";
+    document.getElementById("blocker").style.display = "block";
+  }
+</script>
     
 </body>
 </html>
